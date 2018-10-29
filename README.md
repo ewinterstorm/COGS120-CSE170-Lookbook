@@ -1,0 +1,2 @@
+# COGS120-CSE170-Lookbook
+Project for COGS 120/CSE170
