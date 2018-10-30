@@ -8,7 +8,7 @@ function initializePage() {
   });
 
   $(".backhome").click(function(e) {
-    $(location).attr("href", "home.html");
+    $(location).attr("href", "index.html");
   });
 
   $(".cart").click(function(e) {
