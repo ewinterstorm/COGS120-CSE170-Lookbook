@@ -2,7 +2,9 @@
   position: relative;
   background: none;
 }
-
+.page-header {
+  text-align: center;
+}
 
 body {
   padding: 10px;
@@ -13,9 +15,10 @@ body {
   /* spacing between grid items */
   grid-gap: 10px;
   /* columns of grid that adjust to screen*/
-  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-auto-rows: 400px;
 }
+
 
 .btn{
   /*float: left;
@@ -24,17 +27,100 @@ body {
   border: 2px solid hsla(0, 0%, 0%, 0.5);
 }
 
+img {
+  object-fit:cover;
+}
+
 .cart{
   height:auto;
   padding: 5px 5px;
   text-align:center;
   top:5px;
-  position:absolute;
-  right:120px;
+  position: absolute;
+  right:10px;
+}
 
+
+
+
+
+
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
-/*
-.grid-item--width2 {
-  width: 160px;
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 500px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
 }
-*/
+
+/* Popup arrow *//*
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}*/
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1ms;
+    animation: fadeIn 1ms
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+.block_on_the_left {
+    float:left;
+    width:20%;
+    text-align: center;
+    border: black 3px solid;
+    height: 300px;
+}
+
+#container_on_the_right {
+    float:left;
+    width:20%;
+    height:300px;
+    padding-left:50px;
+}
+
+.block2 {
+    width:100%;
+    border: black 3px solid;
+    height: 50px;
+    padding-left: 20px;
+}
+.block3 {
+    width:100%;
+    padding-left: 20px;
+}
