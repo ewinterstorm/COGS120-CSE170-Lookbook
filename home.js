@@ -14,7 +14,7 @@ function initializePage() {
   });
 
   //Go to outfit1
-  $("#item1").click(function(e) {
+  $("#outfit1").click(function(e) {
     $(location).attr("href", "outfit1.html");
   });
 
