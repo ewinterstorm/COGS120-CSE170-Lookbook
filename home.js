@@ -18,6 +18,30 @@ function initializePage() {
     $(location).attr("href", "outfit1.html");
   });
 
+  $("#outfit2").click(function(e) {
+    $(location).attr("href", "outfit2.html");
+  });
+
+  $("#outfit3").click(function(e) {
+    $(location).attr("href", "outfit3.html");
+  });
+
+  $("#outfit4").click(function(e) {
+    $(location).attr("href", "outfit4.html");
+  });
+
+  $("#outfit5").click(function(e) {
+    $(location).attr("href", "outfit5.html");
+  });
+
+  $("#outfit6").click(function(e) {
+    $(location).attr("href", "outfit6.html");
+  });
+
+
+
+
+
   //Popup for outfit1 item1
   $(".popup").click(myFunction);
   function myFunction(event) {
