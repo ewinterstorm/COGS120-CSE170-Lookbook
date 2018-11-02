@@ -26,19 +26,32 @@
     <h5>< Back</h5>
   </button>
 
+
+
+<div class="container" id="wholecontainer">
   <div class="outfittitle">
   <h1>Outfit 1</h1>
 </div>
 
   <div class="block_on_the_left">
-    <h2>Model wearing outfit1</h2>
+    <p>
+      <img style="-webkit-user-select: none;cursor: zoom-in;" src="https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain" width="422">
+    </p>
+    <div class="info" style = "float:left">
+      <p>
+        Information about model: <br>
+        Model size <br>
+        Model height <br>
+      </p>
+    </div>
  </div>
 
 
  <div class="floaters" id="container_on_the_right">
         <div class="block2">
-
-              <h3>item1</h3>
+          <div class="item">
+            <h3>item1</h3>
+          </div>
 
             <div class="btn-group">
             <button class="btn size" style="float:right">
@@ -47,12 +60,21 @@
             <button class="btn quantity" style="float:right">
               <h5>quantity</h5>
             </button>
+
           </div>
+
+          <div style="display: block">
+          <button class="btn addcart">
+            <h5>Add to Cart</h5>
+          </button>
+        </div>
 
         </div>
 
         <div class="block3">
+          <div class="item">
             <h3>item2</h3>
+          </div>
             <div class="btn-group">
             <button class="btn size" style="float:right">
               <h5>size</h5>
@@ -61,10 +83,19 @@
               <h5>quantity</h5>
             </button>
           </div>
+
+          <div style="display: block">
+          <button class="btn addcart">
+            <h5>Add to Cart</h5>
+          </button>
+        </div>
         </div>
 
-        <div class="block3">
+        <div class="block3" id="bottomitem">
+          <div class="item">
             <h3>item3</h3>
+          </div>
+
             <div class="btn-group">
             <button class="btn size" style="float:right">
               <h5>size</h5>
@@ -73,17 +104,19 @@
               <h5>quantity</h5>
             </button>
           </div>
+
+          <div style="display: block">
+          <button class="btn addcart">
+            <h5>Add to Cart</h5>
+          </button>
+        </div>
         </div>
 
 
   </div>
 
-<div class="container info" style = "float:left">
-  <p>
-    Information about model: <br>
-    Model size <br>
-    Model height <br>
-  </p>
+
+
 </div>
 
 <script src="jquery.js"></script>
