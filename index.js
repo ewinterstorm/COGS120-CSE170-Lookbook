@@ -1,5 +1,5 @@
 var outfitData = [
-  {'outfitpic': 'outfit1.jpeg', 'index': 1},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 1},
   {'outfitpic': 'outfit1.jpeg', 'index': 2},
   {'outfitpic': 'outfit1.jpeg', 'index': 3},
   {'outfitpic': 'outfit1.jpeg', 'index': 4},
