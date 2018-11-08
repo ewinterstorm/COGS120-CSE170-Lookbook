@@ -3,7 +3,9 @@
   <title>Cart</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
+  <link href="cart.css" rel="stylesheet">
 </head>
 
 <body>
@@ -12,28 +14,55 @@
     <div class="container-fluid">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <div class="navbar-brand backhome">
-            <h4>< Back</h4>
-        </div>
-        <div class="navbar-brand backhome">
-            Lookbook
-        </div>
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <div class="menu opennav hvr-grow">
+              <div class="lines"></div>
+              <div class="lines"></div>
+              <div class="lines"></div>
+            </div>
+          </li>
+          <li>
+            <a href="index.html" style="text-decoration:none">
+              <div class="navbtn hvr-grow">
+                <div class="brand">
+                  Lookbook
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="cart.html">Cart</a></li>
-          <li><a href="#">Profile</a></li>
+          <li>
+            <a href="cart.html">
+              <div class="navbtn hvr-grow">
+                Cart
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="login.html">
+              <div class="navbtn hvr-grow">
+                Sign In
+              </div>
+            </a>
+          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
 
-  <div class="container">
-    <h3> Cart</h3>
+  <div class="container" id="cartcontainer">
+    <div class="container carttitle">
+        Cart
+    </div>
 
-
+    <div class="container" id="cartitems">
+    </div>
   </div>
 
-<script src="jquery.js"></script>
-<script src="index.js"></script>
+  <script src="jquery.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

@@ -58,15 +58,15 @@
 
   <!--OUTFIT INFO-->
   <div class="container" id="wholecontainer">
-    <div class="container outfitname">
-        Outfit 1
-    </div>
 
     <!--OUTFIT PHOTO, DESCRIPTION, and ITEMS -->
     <div class="container" id="outfitcontainer">
 
       <!--LEFT BLOCK-->
       <div class="container_on_the_left">
+        <div class="container outfitname">
+            Outfit 1
+        </div>
         <div class="outfitimg">
           <img src="https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain">
         </div>
@@ -81,7 +81,9 @@
       <script id="item-template" type="text/x-handlebars-template">
         <div class="item" id="item{{index}}">
           <div class="itemimg">
-            <img src="{{itempic}}"/>
+            <a href="item1.html">
+              <img src="{{itempic}}"/>
+            </a>
           </div>
 
           <div class="selections">
