@@ -1,11 +1,30 @@
-.navbar-brand{
-  color:#22bdb7b0;
-  font-size: 30px;
+/*TOP NAVBAR*/
+.menu{
+  color:black;
+  margin: 10px;
 }
 
-.outfitLabel {
-  color: black;
+.lines{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+.brand{
+  font-size: 30px;
+  color:black;
+}
+
+.navbtn{
   font-size: 20px;
+  color:black;
+  text-align: center;
+}
+
+.backbtn{
+  font-size:15px;
+  color:black;
 }
 
 body {
@@ -24,28 +43,45 @@ body {
   grid-auto-rows: 400px;
 }
 
+/*OUTFIT TILES*/
+.outfittile{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
 .outfit{
-  width:100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  padding-bottom: 5px;
+  border-radius: 10px;
 }
 
-.btn{
-  float:left;
-  padding: 2px;
-  border: 2px solid hsla(0, 0%, 0%, 0.5);
+.outfitLabel {
+  color: black;
+  font-size: 20px;
+  text-align: center;
 }
 
-.cart{
-  padding: 3px 3px;
-  text-align:center;
-  top:5px;
-  position: absolute;
-  right:10px;
-  align-items:center;
-  background-color: #22bdb7b0;
+/*FOR HOVER ANIMATION*/
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.1s;
+    transition-property: transform;
 }
 
-
+/*FOR HOVER ANIMATION*/
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.02);
+}
 
 /* The side navigation menu */
 .sidenav {
@@ -66,7 +102,7 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
 }
@@ -96,7 +132,6 @@ body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
-
 
 /*
 .popup {

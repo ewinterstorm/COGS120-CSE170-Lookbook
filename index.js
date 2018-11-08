@@ -1,10 +1,10 @@
 var outfitData = [
   {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 1},
-  {'outfitpic': 'outfit1.jpeg', 'index': 2},
-  {'outfitpic': 'outfit1.jpeg', 'index': 3},
-  {'outfitpic': 'outfit1.jpeg', 'index': 4},
-  {'outfitpic': 'outfit1.jpeg', 'index': 5},
-  {'outfitpic': 'outfit1.jpeg', 'index': 6}
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 2},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 3},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 4},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 5},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 6}
 ]
 
 
@@ -16,7 +16,7 @@ function initializePage() {
   /* Set the width of the side navigation to 250px */
   $(".opennav").click(openNav);
   function openNav(event) {
-      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("mySidenav").style.width = "180px";
   }
 
   /* Set the width of the side navigation to 0 */
