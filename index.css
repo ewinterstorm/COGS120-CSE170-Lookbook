@@ -54,7 +54,6 @@ body {
   display:block;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 10px;
 }
 
 .outfit{
@@ -90,6 +89,18 @@ body {
 
 
 /*-------------FILTER NAV MENU----------------*/
+
+/*.filtertxt{
+  font-size: 20px;
+  padding-left: 10px;
+}*/
+
+.filtertitle{
+  color: white;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -105,7 +116,7 @@ body {
 }
 
 /* The navigation menu links */
-.sidenav a {
+.filters div {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -121,6 +132,8 @@ body {
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
+    text-decoration: none;
+    color:white;
     position: absolute;
     top: 0;
     right: 25px;

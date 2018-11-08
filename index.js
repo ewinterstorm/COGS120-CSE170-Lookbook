@@ -1,10 +1,10 @@
 var outfitData = [
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 1},
-  {'outfitpic': 'https://i-h2.pinimg.com/564x/7f/92/68/7f9268f40d509c5c85155a0b5e58d772.jpg', 'index': 2},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 3},
-  {'outfitpic': 'https://i-h2.pinimg.com/564x/fb/49/94/fb4994e119fc00f4f28ce60f2d371437.jpg', 'index': 4},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 5},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 6}
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 1, 'Season': 'Spring'},
+  {'outfitpic': 'https://i-h2.pinimg.com/564x/7f/92/68/7f9268f40d509c5c85155a0b5e58d772.jpg', 'index': 2, 'Season': 'Summer'},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45416070_011_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 3, 'Season': 'Winter'},
+  {'outfitpic': 'https://i-h2.pinimg.com/564x/fb/49/94/fb4994e119fc00f4f28ce60f2d371437.jpg', 'index': 4, 'Season': 'Spring'},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 5, 'Season': 'Fall'}/*,*/
+  /*{'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 6, 'Season': 'Fall'}*/
 ]
 
 $(document).ready(function() {
@@ -12,11 +12,107 @@ $(document).ready(function() {
 })
 
 function initializePage() {
+
+  /*-------------------FILTERS-------------------*/
+
+/*
+var queryParams = new URLSearchParams(window.location.search);
+var projectTitle = queryParams.get('Spring');
+console.log('query for', projectTitle);
+*/
+// to get this to work like in class, comment out the "STEP 1" parts
+// above between BEGIN and END.
+var source   = $("#outfit-template").html();
+var template = Handlebars.compile(source);
+
+var parentDiv = $("#templatedOutfits");
+
+var name = window.localStorage.getItem('currFilter');
+
+$("#Spring").click(function(e){
+
+  $('#currfilter').text('Spring');
+
+  for (var i = 0; i < outfitData.length; i++) {
+    var curData = outfitData[i];
+    var outfitnum = "#outfit" + (i+1);
+    if (curData.Season != 'Spring') {
+      $(outfitnum).hide();
+    }
+    else{
+      $(outfitnum).show();
+    }
+  }
+});
+
+$("#Summer").click(function(e){
+
+  $('#currfilter').text('Summer');
+
+  for (var i = 0; i < outfitData.length; i++) {
+    var curData = outfitData[i];
+    var outfitnum = "#outfit" + (i+1);
+    if (curData.Season != 'Summer') {
+      $(outfitnum).hide();
+    }
+    else{
+      $(outfitnum).show();
+    }
+  }
+});
+
+$("#Fall").click(function(e){
+
+  $('#currfilter').text('Fall');
+
+  for (var i = 0; i < outfitData.length; i++) {
+    var curData = outfitData[i];
+    var outfitnum = "#outfit" + (i+1);
+    if (curData.Season != 'Fall') {
+      $(outfitnum).hide();
+    }
+    else{
+      $(outfitnum).show();
+    }
+  }
+});
+
+$("#Winter").click(function(e){
+
+  $('#currfilter').text('Winter');
+
+  for (var i = 0; i < outfitData.length; i++) {
+    var curData = outfitData[i];
+    var outfitnum = "#outfit" + (i+1);
+    if (curData.Season != 'Winter') {
+      $(outfitnum).hide();
+    }
+    else{
+      $(outfitnum).show();
+    }
+  }
+});
+
+
+$(".delfilters").click(function(e){
+
+  $('#currfilter').text('None');
+  
+  for (var i = 0; i < outfitData.length; i++) {
+    var curData = outfitData[i];
+    var outfitnum = "#outfit" + (i+1);
+    $(outfitnum).show();
+  }
+});
+
+
+
+
   /*-------------------NAV BAR-------------------*/
   /* Set the width of the side navigation to 250px */
   $(".opennav").click(openNav);
   function openNav(event) {
-      document.getElementById("mySidenav").style.width = "180px";
+      document.getElementById("mySidenav").style.width = "200px";
   }
 
   /* Set the width of the side navigation to 0 */
@@ -48,7 +144,7 @@ function initializePage() {
   var parentDiv = $("#templatedOutfits");
 
   // now iterate through the complexData list and keep appending:
-  for (var i = 0; i < outfitData.length; i++) {
+ for (var i = 0; i < outfitData.length; i++) {
     var curData = outfitData[i];
     var curHtml = template(curData);
     parentDiv.append(curHtml);

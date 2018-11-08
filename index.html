@@ -58,15 +58,78 @@
     <!--SIDE NAV-->
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn closenav">&times;</a>
-      <a href="#">Season</a>
-      <a href="#">Event</a>
-      <a href="#">Trend</a>
-      <a href="#">Color</a>
+      <div class="filtertitle">
+        Filters
+      </div>
+
+      <button class="delfilters">
+        Remove All Filters
+      </button>
+      <div class="filters">
+        <div style="font-size: 17px">
+          Current Filter: <div id="currfilter" style="font-size:15px">None</div>
+        </div>
+        <div>Season</div>
+          <div class="hvr-grow filtertxt changeSpring" id="Spring" style="font-size: 18px">
+            Spring
+          </div>
+          <div class="hvr-grow filtertxt" id="Summer" style="font-size: 18px">
+            Summer
+          </div>
+          <div class="hvr-grow filtertxt" id="Fall" style="font-size: 18px">
+            Fall
+          </div>
+          <div class="hvr-grow filtertxt" id="Winter" style="font-size: 18px">
+            Winter
+          </div>
+
+
+
+<!--
+      <div class="checkbox">
+        <label class="filtertxt"><input type="checkbox" value="Spring">Spring</label>
+      </div>
+      <div class="checkbox">
+        <label class="filtertxt"><input type="checkbox" value="Summer">Summer</label>
+      </div>
+      <div class="checkbox disabled">
+        <label class="filtertxt"><input type="checkbox" value="Fall">Fall</label>
+      </div>
+      <div class="checkbox disabled">
+        <label class="filtertxt"><input type="checkbox" value="Winter">Winter</label>
+      </div>
+
+      <div>Event</div>
+      <div class="checkbox">
+        <label class="filtertxt"><input type="checkbox" value="">Night Out</label>
+      </div>
+      <div class="checkbox">
+        <label class="filtertxt"><input type="checkbox" value="">Night In</label>
+      </div>
+      <div class="checkbox disabled">
+        <label class="filtertxt"><input type="checkbox" value="">Professional</label>
+      </div>
+      <div class="checkbox disabled">
+        <label class="filtertxt"><input type="checkbox" value="">Christmas</label>
+      </div>
+-->
+      <!--
+      <div>Trend</div>
+      <div class="form-group">
+        <select class="form-control" id="sel1">
+          <option>None</option>
+          <option>Boho</option>
+          <option>Pastels</option>
+          <option>Grunge</option>
+          <option>Casual</option>
+        </select>
+      </div>-->
+    </div>
     </div>
 
     <!--Template for outfit photos-->
     <script id="outfit-template" type="text/x-handlebars-template">
-        <div class="outfittile" id="outfit{{index}}">
+        <div class="outfittile {{Season}}" id="outfit{{index}}">
           <a href="outfit{{index}}.html" style="text-decoration: none">
             <img class="hvr-grow outfit" border="0" src="{{outfitpic}}">
             <div class="outfitLabel">Outfit {{index}}</div>

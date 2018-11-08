@@ -9,18 +9,20 @@
 </head>
 
 <body>
-  <!-- TOP NAV BAR -->>
+  <!-- TOP NAV BAR -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-left">
           <li>
-            <div class="menu opennav hvr-grow">
-              <div class="lines"></div>
-              <div class="lines"></div>
-              <div class="lines"></div>
-            </div>
+            <a href="index.html" style="text-decoration:none">
+              <div class="backbtn hvr-grow">
+                <div>
+                  Back
+                </div>
+              </div>
+            </a>
           </li>
           <li>
             <a href="index.html" style="text-decoration:none">
@@ -58,11 +60,27 @@
         Cart
     </div>
 
-    <div class="container" id="cartitems">
+    <!--Template for cart items-->
+    <script id="cart-template" type="text/x-handlebars-template">
+        <div class="cartitem" id="item{{index}}">
+          <a href="{{itemimg}}" style="text-decoration: none">
+            <div class="itemLabel">
+              Item {{index}}
+            </div>
+            <img class="hvr-grow" border="0" src="#">
+          </a>
+        </div>
+    </script>
+
+    <div class="container" id="templatedCart">
+      <!--injected html code for cart items-->
     </div>
   </div>
 
   <script src="jquery.js"></script>
+  <script src="handlebars-v4.0.12.js"></script>
   <script src="index.js"></script>
+  <script src="outfit1.js"></script>
+  <script src="cart.js"></script>
 </body>
 </html>
