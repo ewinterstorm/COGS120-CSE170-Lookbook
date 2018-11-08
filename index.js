@@ -1,18 +1,18 @@
 var outfitData = [
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 1},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 2},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 3},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 4},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 5},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain"', 'index': 6}
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 1},
+  {'outfitpic': 'https://i-h2.pinimg.com/564x/7f/92/68/7f9268f40d509c5c85155a0b5e58d772.jpg', 'index': 2},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 3},
+  {'outfitpic': 'https://i-h2.pinimg.com/564x/fb/49/94/fb4994e119fc00f4f28ce60f2d371437.jpg', 'index': 4},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 5},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 6}
 ]
-
 
 $(document).ready(function() {
   initializePage();
 })
 
 function initializePage() {
+  /*-------------------NAV BAR-------------------*/
   /* Set the width of the side navigation to 250px */
   $(".opennav").click(openNav);
   function openNav(event) {
@@ -25,41 +25,14 @@ function initializePage() {
       document.getElementById("mySidenav").style.width = "0";
   }
 
+  /*-------------------BUTTON PRESSES-------------------*/
   //Press back button while at an outfit
   $(".backhome").click(function(e) {
     $(location).attr("href", "index.html");
   });
 
-  //Press cart button
-  $(".cart").click(function(e) {
-    $(location).attr("href", "cart.html");
-  });
 
-  //Go to outfit1
-  $("#outfit1").click(function(e) {
-    $(location).attr("href", "outfit1.html");
-  });
-
-  $("#outfit2").click(function(e) {
-    $(location).attr("href", "outfit2.html");
-  });
-
-  $("#outfit3").click(function(e) {
-    $(location).attr("href", "outfit3.html");
-  });
-
-  $("#outfit4").click(function(e) {
-    $(location).attr("href", "outfit4.html");
-  });
-
-  $("#outfit5").click(function(e) {
-    $(location).attr("href", "outfit5.html");
-  });
-
-  $("#outfit6").click(function(e) {
-    $(location).attr("href", "outfit6.html");
-  });
-
+  /*-------------------OUTFIT TEMPLATE-------------------*/
 
   var source   = $("#outfit-template").html();
   var template = Handlebars.compile(source);
@@ -72,14 +45,5 @@ function initializePage() {
     var curHtml = template(curData);
     parentDiv.append(curHtml);
   };
-
-
-
-  //Popup for outfit1 item1
-  $(".popup").click(myFunction);
-  function myFunction(event) {
-      var popup = document.getElementById("myPopup");
-      popup.classList.toggle("show");
-  }
 
 }

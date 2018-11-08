@@ -1,4 +1,7 @@
-/*TOP NAVBAR*/
+/*-------------TOP NAVBAR----------------*/
+div {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 .menu{
   color:black;
   margin: 10px;
@@ -12,8 +15,9 @@
 }
 
 .brand{
-  font-size: 30px;
+  font-size: 40px;
   color:black;
+  
 }
 
 .navbtn{
@@ -23,8 +27,10 @@
 }
 
 .backbtn{
-  font-size:15px;
+  font-size:13px;
   color:black;
+  width: 10px;
+  height: 20px;
 }
 
 body {
@@ -43,7 +49,7 @@ body {
   grid-auto-rows: 400px;
 }
 
-/*OUTFIT TILES*/
+/*-------------OUTFIT TITLES----------------*/
 .outfittile{
   display:block;
   margin-left: auto;
@@ -64,7 +70,7 @@ body {
   text-align: center;
 }
 
-/*FOR HOVER ANIMATION*/
+/*-------------HOVER ANIMATION----------------*/
 .hvr-grow {
     display: inline-block;
     vertical-align: middle;
@@ -76,13 +82,14 @@ body {
     transition-property: transform;
 }
 
-/*FOR HOVER ANIMATION*/
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.02);
 }
 
+
+/*-------------FILTER NAV MENU----------------*/
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -119,12 +126,6 @@ body {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

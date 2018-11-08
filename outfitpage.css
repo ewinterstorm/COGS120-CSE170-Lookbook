@@ -1,88 +1,90 @@
-.outfittitle{
-  padding-left:350px;
+#wholecontainer {
+  margin-top: 30px;
+  align-content: center;
+  padding: 0px;
 }
 
-.block_on_the_left {
-    float:left;
-    width: 430px;
-    text-align: center;
-    border: black 3px solid;
-    height: 640px;
-    margin-left: 350px;
-    object-fit:cover
+.outfitname{
+  font-size: 50px;
+  padding: 0px;
 }
 
-.block_on_the_left h2 {
-  vertical-align:middle;
-  text-align:center;
-  line-height: 400px;
+#outfitcontainer{
+  align-content: center;
+  padding: 0px;
+  margin-bottom: 50px;
+  display: inline-flex;
+  justify-content: center;
 }
 
-#container_on_the_right {
-    float:left;
-    width:auto;
-    height:auto;
-    padding:15px;
-    margin-left: 100px;
-    border: black 3px solid;
-    margin-bottom: 20px;
+/*---------------OUTFIT IMAGE AND DESCRIPTION TEXT----------*/
+.container_on_the_left {
+  width: 50%;
+  height: 100%;
+  margin:20px;
+  padding:0px;
 }
 
-.block2 {
-    width:100%;
-    height: 35%;
-
-}
-.block3 {
-    width:100%;
-    height:35%
+.outfitimg{
+  width: 100%;
+  height: 600px;
 }
 
-#bottomitem{
-    width:100%;
-    height:30%
+.outfitimg img{
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
 }
 
-.info {
-  width: 422px;
-  margin-top: 50px;
-  padding-bottom: 30px;
-  text-align: left;
-  border: black 3px solid;
-  margin-bottom: 20px;
+.info{
+  margin-top: 20px;
+  font-size: 18px;
+  width: auto;
+  height: auto;
 }
 
-.size {
-  margin: 10px;
-  height: 35px;
-  width: 60px;
-}
-
-.quantity{
-  margin: 10px;
-  height: 35px;
-  width: 95px;
-}
-
-.floaters{
-  display:inline-block;
+/*---------------ITEM IMAGES AND BUTTONS----------*/
+.container_on_the_right {
+  width: 40%;
+  height: 100%;
+  margin: 20px;
+  padding: 0px;
+  display: block;
+  align-content: center;
 }
 
 .item{
-  border: black 3px solid;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-#wholecontainer {
-  display: inline;
+.itemimg{
+  width: 70%;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
 }
 
-.addcart{
-  display:block;
-  height: 35px;
-  width: 110px;
+.itemimg img{
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.dropdowns{
+  display: flex;
+}
+
+.selections{
+  display: flex;
+  justify-content: space-between;
+}
+
+.size-qty{
+  padding: 10px;
 }
