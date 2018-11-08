@@ -1,0 +1,10 @@
+#cartcontainer{
+  margin-top: 30px;
+  align-content: center;
+}
+
+.carttitle{
+  color:black;
+  font-size: 50px;
+  padding: 0px;
+}
