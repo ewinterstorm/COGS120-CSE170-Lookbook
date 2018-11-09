@@ -65,6 +65,12 @@
   color: black;
 }
 
+.itemcost{
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
 .itemimg{
   width: 70%;
   height: 200px;

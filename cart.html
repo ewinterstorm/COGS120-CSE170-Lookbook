@@ -45,8 +45,8 @@
           </li>
           <li>
             <a href="login.html">
-              <div class="navbtn hvr-grow">
-                Sign In
+              <div class="navbtn hvr-grow" id="navlogin">
+                Login
               </div>
             </a>
           </li>
@@ -60,16 +60,28 @@
         Cart
     </div>
 
+    <button class="deleteitems">
+      Delete All Items
+    </button>
     <!--Template for cart items-->
     <script id="cart-template" type="text/x-handlebars-template">
-        <div class="cartitem" id="item{{index}}">
-          <a href="{{itemimg}}" style="text-decoration: none">
-            <div class="itemLabel">
-              Item {{index}}
-            </div>
-            <img class="hvr-grow" border="0" src="#">
-          </a>
+      <div class="cartitem" id="item{{index}}">
+        <div class='itemimg'>
+          <img src="{{itemimg}}"/>
         </div>
+        <div>
+          <div class="itemLabel">
+            Item {{index}}
+          </div>
+          <div>
+            {{itemsize}}
+          </div>
+          <div>
+            {{itemqty}}
+          </div>
+
+        </div>
+      </div>
     </script>
 
     <div class="container" id="templatedCart">
@@ -79,8 +91,6 @@
 
   <script src="jquery.js"></script>
   <script src="handlebars-v4.0.12.js"></script>
-  <script src="index.js"></script>
-  <script src="outfit1.js"></script>
   <script src="cart.js"></script>
 </body>
 </html>

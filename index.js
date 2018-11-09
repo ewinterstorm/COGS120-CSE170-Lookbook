@@ -1,10 +1,10 @@
 var outfitData = [
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 1, 'Season': 'Spring'},
+  {'outfitpic': 'Outfit1.jpeg', 'index': 1, 'Season': 'Spring'},
   {'outfitpic': 'https://i-h2.pinimg.com/564x/7f/92/68/7f9268f40d509c5c85155a0b5e58d772.jpg', 'index': 2, 'Season': 'Summer'},
   {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45416070_011_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 3, 'Season': 'Winter'},
-  {'outfitpic': 'https://i-h2.pinimg.com/564x/fb/49/94/fb4994e119fc00f4f28ce60f2d371437.jpg', 'index': 4, 'Season': 'Spring'},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 5, 'Season': 'Fall'}/*,*/
-  /*{'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 6, 'Season': 'Fall'}*/
+  {'outfitpic': 'https://i-h2.pinimg.com/564x/fb/49/94/fb4994e119fc00f4f28ce60f2d371437.jpg', 'index': 4, 'Season': 'Summer'},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 5, 'Season': 'Fall'}/*,
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48013312_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 6, 'Season': 'Fall'}*/
 ]
 
 $(document).ready(function() {
@@ -12,14 +12,17 @@ $(document).ready(function() {
 })
 
 function initializePage() {
+  localStorage.setItem('yes1', 0);
+  localStorage.setItem('yes2', 0);
+  localStorage.setItem('yes3', 0);
+
+  /*-------------------FOR LOGIN-------------------*/
+  $('.login_btn').click(function(e){
+    console.log("inside");
+    $('#navlogin').text('Profile');
+  });
 
   /*-------------------FILTERS-------------------*/
-
-/*
-var queryParams = new URLSearchParams(window.location.search);
-var projectTitle = queryParams.get('Spring');
-console.log('query for', projectTitle);
-*/
 // to get this to work like in class, comment out the "STEP 1" parts
 // above between BEGIN and END.
 var source   = $("#outfit-template").html();
@@ -97,15 +100,13 @@ $("#Winter").click(function(e){
 $(".delfilters").click(function(e){
 
   $('#currfilter').text('None');
-  
+
   for (var i = 0; i < outfitData.length; i++) {
     var curData = outfitData[i];
     var outfitnum = "#outfit" + (i+1);
     $(outfitnum).show();
   }
 });
-
-
 
 
   /*-------------------NAV BAR-------------------*/
@@ -127,13 +128,6 @@ $(".delfilters").click(function(e){
     $(location).attr("href", "index.html");
   });
 
-  function validateForm() {
-    var x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-        alert("Name must be filled out");
-        return false;
-    }
-}
 
 
   /*-------------------OUTFIT TEMPLATE-------------------*/

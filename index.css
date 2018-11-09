@@ -26,6 +26,11 @@ div {
   text-align: center;
 }
 
+.cartnumber{
+  margin-top: 10px;;
+  margin-bottom: auto;
+}
+
 .backbtn{
   font-size:13px;
   color:black;
@@ -147,28 +152,29 @@ body {
     .sidenav a {font-size: 18px;}
 }
 
-/*
+/*-------------POPUP----------------*/
 .popup {
     position: relative;
     display: inline-block;
     cursor: pointer;
-}*/
+}
 
 /* The actual popup (appears on top) */
-/*.popup .popuptext {
+.popup .popuptext {
     visibility: hidden;
-    width: 500px;
+    width: 80px;
     background-color: #555;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 8px 0;
+    /*padding: 8px 0;*/
     position: absolute;
     z-index: 1;
     bottom: 125%;
     left: 50%;
-    margin-left: -80px;
-}*/
+    margin-left: -40px;
+}
+
 
 /* Popup arrow *//*
 .popup .popuptext::after {
@@ -180,17 +186,23 @@ body {
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) *//*
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 2ms;
+    animation: fadeIn 2ms
 }*/
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-/*.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1ms;
-    animation: fadeIn 1ms
-}
-*/
-/* Add animation (fade in the popup) */
-/*@-webkit-keyframes fadeIn {
+/*.popup .close {
+  visibility: hidden;
+  -webkit-animation: fadeOut 2ms;
+  animation: fadeOut 2ms;
+}*/
+
+/*Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
@@ -199,4 +211,3 @@ body {
     from {opacity: 0;}
     to {opacity:1 ;}
 }
-*/

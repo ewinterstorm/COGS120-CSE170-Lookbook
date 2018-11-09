@@ -44,9 +44,9 @@
             </a>
           </li>
           <li>
-            <a href="#">
-              <div class="navbtn hvr-grow">
-                Sign In
+            <a href="login.html">
+              <div class="navbtn hvr-grow" id="navlogin">
+                Login
               </div>
             </a>
           </li>
@@ -68,7 +68,7 @@
             Outfit 1
         </div>
         <div class="outfitimg">
-          <img src="https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain">
+          <img src="Outfit1.jpeg">
         </div>
         <div class="info">
             Information about model: <br>
@@ -83,10 +83,13 @@
           <div class="itemname">
             {{itemname}}
           </div>
+          <div class="itemcost">
+            {{itemcost}}
+          </div>
           <div class="itemimg">
-            <a href="item1.html">
+
               <img src="{{itempic}}"/>
-            </a>
+
           </div>
 
           <div class="selections">
@@ -94,12 +97,12 @@
               <div class="size-qty">
                 <label>Size:</label>
                 <select name="item{{index}}size">
-                  <option value="1">XS</option>
-                  <option value="2">S</option>
-                  <option value="3">M</option>
-                  <option value="4">L</option>
-                  <option value="5">XL</option>
-                  <option value="6">XXL</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
                 </select>
               </div>
 
@@ -116,11 +119,16 @@
               </div>
             </div>
 
-            <button class="addcart">
-              <div>
+            <div>
+            <div class="popuptext" id="myPopup{{index}}">
+              Added to Cart!
+            </div>
+            <button class="addcart popup" id="cartitem{{index}}">
+              <!--<div class ="popup">-->
                 Add to Cart
-              </div>
+              <!--</div>-->
             </button>
+          </div>
           </div>
         </div>
       </script>
@@ -131,14 +139,6 @@
       </div>
     </div>
   </div>
-
-  <!--
-  <button class ="popup" onClick="myFunction()">Item1
-    <div class="popuptext" id="myPopup">
-      <h4>IMAGE OF GLASSES WITH INFO</h4>
-      <button style="float:right">X</button>
-    </div>
-  </button>-->
 
 <script src="jquery.js"></script>
 <script src="handlebars-v4.0.12.js"></script>
