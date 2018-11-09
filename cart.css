@@ -3,6 +3,11 @@
   align-content: center;
 }
 
+#templatedCart{
+  margin-top: 20px;
+
+}
+
 .carttitle{
   color:black;
   font-size: 50px;
@@ -28,4 +33,8 @@
 
 .itemLabel{
   font-size: 30px;
+}
+
+.iteminfo{
+  font-size: 20px;
 }
