@@ -1,5 +1,5 @@
 var outfitData = [
-  {'outfitpic': 'Outfit1.jpeg', 'index': 1, 'Season': 'Spring'},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 1, 'Season': 'Spring'},
   {'outfitpic': 'https://i-h2.pinimg.com/564x/7f/92/68/7f9268f40d509c5c85155a0b5e58d772.jpg', 'index': 2, 'Season': 'Summer'},
   {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45416070_011_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 3, 'Season': 'Winter'},
   {'outfitpic': 'https://i-h2.pinimg.com/564x/fb/49/94/fb4994e119fc00f4f28ce60f2d371437.jpg', 'index': 4, 'Season': 'Summer'},
@@ -15,12 +15,21 @@ function initializePage() {
   localStorage.setItem('yes1', 0);
   localStorage.setItem('yes2', 0);
   localStorage.setItem('yes3', 0);
+  localStorage.setItem('checklogin',0)
 
   /*-------------------FOR LOGIN-------------------*/
-  $('.login_btn').click(function(e){
+
+  $('.navbtn').click(function(e){
     console.log("inside");
-    $('#navlogin').text('Profile');
+    localStorage.setItem('checklogin',1)
   });
+
+  var check = JSON.parse(localStorage.getItem('checklogin'));
+  console.log(check);
+  if (check == 1){
+    console.log("made it");
+    //$('#navlogin').html(<div class="navbtn hvr-grow" id="navlogin">Profile</div>);
+  }
 
   /*-------------------FILTERS-------------------*/
 // to get this to work like in class, comment out the "STEP 1" parts
