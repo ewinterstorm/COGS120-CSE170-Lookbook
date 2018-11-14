@@ -15,6 +15,14 @@ div {
     margin: 6px 0;
 }
 
+#title{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    display: block;
+    margin-left: -83.5px;
+}
+
 .brand{
   font-size: 40px;
   color:black;
@@ -43,15 +51,25 @@ body {
   padding-bottom: 20px;
 }
 
+#main{
+  padding: 0px;
+  margin-left: 0px;
+  margin-right:0px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
 .grid {
   margin-top: 50px;
   margin-bottom: 100px;
+  margin-left: 170px;
   display: grid;
   /* spacing between grid items */
-  grid-gap: 50px;
+  grid-gap: 100px;
   /* columns of grid that adjust to screen*/
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-  grid-auto-rows: 400px;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-auto-rows: 500px;
+  padding: 50px;
 }
 
 /*-------------OUTFIT TITLES----------------*/
@@ -95,24 +113,23 @@ body {
 
 /*-------------FILTER NAV MENU----------------*/
 
-/*.filtertxt{
-  font-size: 20px;
-  padding-left: 10px;
-}*/
-
 .filtertitle{
   color: white;
   font-size: 25px;
-  padding-left: 10px;
+  padding-left: 20px;
+}
+
+.delfilters {
+  margin-left: 20px;
 }
 
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 170px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 50px; /* Stay at the top */
+    top: 30px; /* Stay at the top */
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -128,22 +145,6 @@ body {
     color: white;
     display: block;
     transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    text-decoration: none;
-    color:white;
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

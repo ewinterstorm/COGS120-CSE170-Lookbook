@@ -19,6 +19,12 @@ width: 500px;
 background-color: rgba(0,0,0,0.8) !important;
 }
 
+.glyphicon{
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+}
+
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
