@@ -1,6 +1,10 @@
 /*-------------TOP NAVBAR----------------*/
+body{
+  background-color: #ffe4f4;
+}
+
 div {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Shrikhand', cursive;
 }
 
 .menu{

@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!--CSS file-->
   <link href="index.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 </head>
 
 <body>
@@ -15,24 +15,13 @@
     <div class="container-fluid">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <!--<ul class="nav navbar-nav navbar-left">
-          <li>
-            <div class="menu opennav hvr-grow">
-              <div class="lines"></div>
-              <div class="lines"></div>
-              <div class="lines"></div>
+        <a href="index.html" style="text-decoration:none" id="title">
+          <div class="navbtn hvr-grow">
+            <div class="brand">
+              Lookbook
             </div>
-          </li>
-          <li>-->
-            <a href="index.html" style="text-decoration:none" id="title">
-              <div class="navbtn hvr-grow">
-                <div class="brand">
-                  Lookbook
-                </div>
-              </div>
-            </a>
-
-
+          </div>
+        </a>
 
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -43,7 +32,7 @@
             </a>
           </li>
           <li class="login">
-            <a href="login.html">
+            <a href="login.html" id="loggedin">
               <div class="navbtn hvr-grow" id="navlogin">
                 Login
               </div>
@@ -91,7 +80,6 @@
         <div class="outfittile {{Season}}" id="outfit{{index}}">
           <a href="outfit{{index}}.html" style="text-decoration: none">
             <img class="hvr-grow outfit" border="0" src="{{outfitpic}}">
-
           </a>
         </div>
     </script>

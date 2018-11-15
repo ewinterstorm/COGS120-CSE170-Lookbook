@@ -1,15 +1,17 @@
 <html>
 <head>
-  <title>Cart</title>
+  <title>Login Page</title>
   <meta charset="utf-8">
+  <!--Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+  <!--CSS file-->
   <link href="index.css" rel="stylesheet">
-  <link href="cart.css" rel="stylesheet">
+  <link href="outfitpage.css" rel="stylesheet">
+  <link href="profile.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 </head>
 
 <body>
-  <!-- TOP NAV BAR -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,14 +26,14 @@
               </div>
             </a>
           </li>
-          </ul>
-          <a href="index.html" style="text-decoration:none" id="title">
-            <div class="navbtn hvr-grow">
-              <div class="brand">
-                Lookbook
-              </div>
+        </ul>
+        <a href="index.html" style="text-decoration:none" id="title">
+          <div class="navbtn hvr-grow">
+            <div class="brand">
+              Lookbook
             </div>
-          </a>
+          </div>
+        </a>
 
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -42,9 +44,9 @@
             </a>
           </li>
           <li class="login">
-            <a href="login.html" id="loggedin">
+            <a href="index.html" id="loggedout">
               <div class="navbtn hvr-grow">
-                Login
+                Logout
               </div>
             </a>
           </li>
@@ -53,48 +55,38 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-  <div class="container" id="cartcontainer">
-    <div class="container carttitle">
-        Cart
-    </div>
+  <!--Profile Information-->
+  <div class="container" id="profiletxt">
+    <div id="profiletitle">Profile</div>
 
-    <button class="deleteitems">
-      Delete All Items
-    </button>
-    <!--Template for cart items-->
-    <script id="cart-template" type="text/x-handlebars-template">
-      <div class="cartitem" id="item{{index}}">
-        <div class='itemimg'>
-          <img src="{{itemimg}}"/>
+    <!--Template for profile information-->
+    <script id="profile-template" type="text/x-handlebars-template">
+        <div class="info" id="name">
+          Name: <div class="txt"> {{name}} </div>
         </div>
-        <div>
-          <div class="itemLabel">
-            Item {{index}}
-          </div>
-          <div class=iteminfo>
-            Size: {{itemsize}}
-          </div>
-          <div class=iteminfo>
-            Qty: {{itemqty}}
-          </div>
-          <div class=iteminfo>
-            Price: {{itemcost}}
-          </div>
-          <div class=iteminfo>
-            Shipping time: {{shiptime}} days
-          </div>
-
+        <img src="{{profileimg}}"/>
+        <div class="info" id="email">
+          Email: <div class="txt">{{email}}</div>
         </div>
-      </div>
+        <div class="info" id="address">
+          Shipping Address:
+          <div class="txt">
+            {{street}} <br>
+            {{unit}} <br>
+            {{townzip}}
+          </div>
+        </div>
     </script>
 
-    <div class="container" id="templatedCart">
-      <!--injected html code for cart items-->
+    <div id="profileinfo">
+        <!-- injected html code for outfits-->
     </div>
+
   </div>
 
-  <script src="handlebars-v4.0.12.js"></script>
+
   <script src="jquery.js"></script>
-  <script src="cart.js"></script>
+  <script src="handlebars-v4.0.12.js"></script>
+  <script src="profile.js"></script>
 </body>
 </html>

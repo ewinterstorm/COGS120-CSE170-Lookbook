@@ -7,31 +7,63 @@ var outfitData = [
   {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/47941026_031_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 6, 'Season': 'Fall'}
 ]
 
+var userpass1 = {'username':'iamuser1', 'password':'170'};
+var userpass2 = {'username':'iamuser2', 'password':'120'};
+
+localStorage.setItem('userpass1', JSON.stringify(userpass1));
+localStorage.setItem('userpass2', JSON.stringify(userpass2));
+
 $(document).ready(function() {
   initializePage();
 })
 
 function initializePage() {
+
+  $("#loginchange").click(function(e) {
+    /*Check if username and password are correct*/
+    var userin = $('#username').val();
+    var passin = $('#password').val();
+    if (userin == (JSON.parse(localStorage.getItem('userpass1'))).username && passin == (JSON.parse(localStorage.getItem('userpass1'))).password ) {
+      localStorage.setItem('loggedin', 1);
+      localStorage.setItem('user', 1);
+      window.location.replace("index.html");
+    }
+
+    else if (userin == (JSON.parse(localStorage.getItem('userpass2'))).username && passin == (JSON.parse(localStorage.getItem('userpass2'))).password ) {
+      localStorage.setItem('loggedin', 1);
+      localStorage.setItem('user', 2);
+      $('#loggedin').attr("href", "index.html");
+      console.log('user2');
+      window.location.replace("index.html");
+    }
+
+    else{
+      console.log('alert');
+      alert("Incorrect Username or Password!")
+    }
+
+  });
+
+  $("#loggedout").click(function(e) {
+    localStorage.setItem('loggedin', 0);
+  });
+
+  //check if logged in
+  var loginstatus = localStorage.getItem('loggedin');
+  console.log(loginstatus);
+  if (loginstatus == 1){
+    $('#loggedin').html("<div class='navbtn hvr-grow' id='navlogin'>Profile</div>");
+    $('#loggedin').attr("href", "profile.html");
+  }
+  else{
+    $('#loggedin').html("<div class='navbtn hvr-grow' id='navlogin'>Login</div>");
+    $('#loggedin').attr("href", "login.html");
+  }
+
   localStorage.setItem('yes1', 0);
   localStorage.setItem('yes2', 0);
   localStorage.setItem('yes3', 0);
 
-  localStorage.setItem('checklogin',0);
-
-  /*-------------------FOR LOGIN-------------------*/
-
-
-  $('.navbtn').click(function(e){
-    console.log("inside");
-    localStorage.setItem('checklogin','1');
-  });
-
-  var check = JSON.parse(localStorage.getItem('checklogin'));
-  console.log(check);
-  if (check == 1){
-    console.log("made it");
-    //$('#navlogin').html(<div class="navbtn hvr-grow" id="navlogin">Profile</div>);
-  }
 
   /*-------------------FILTERS-------------------*/
 // to get this to work like in class, comment out the "STEP 1" parts
@@ -119,27 +151,11 @@ $(".delfilters").click(function(e){
   }
 });
 
-
-  /*-------------------NAV BAR-------------------*/
-  /* Set the width of the side navigation to 250px */
-  /*$(".opennav").click(openNav);
-  function openNav(event) {
-      document.getElementById("mySidenav").style.width = "200px";
-  }*/
-
-  /* Set the width of the side navigation to 0 */
-  /*$(".closenav").click(closeNav);
-  function closeNav(event) {
-      document.getElementById("mySidenav").style.width = "0";
-  }*/
-
   /*-------------------BUTTON PRESSES-------------------*/
   //Press back button while at an outfit
   $(".backhome").click(function(e) {
     $(location).attr("href", "index.html");
   });
-
-
 
   /*-------------------OUTFIT TEMPLATE-------------------*/
 
