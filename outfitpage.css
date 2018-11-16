@@ -1,10 +1,11 @@
 #wholecontainer {
-  margin-top: 10px;
+  margin-top: 20px;
   align-content: center;
   padding: 0px;
 }
 
 .outfitname{
+  color: black;
   font-size: 50px;
   padding: 0px;
 }
@@ -26,7 +27,7 @@
 }
 
 .outfitimg{
-  width: 100%;
+  width: auto;
   height: 600px;
 }
 
@@ -60,13 +61,13 @@
 }
 
 .itemname{
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   color: black;
 }
 
 .itemcost{
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   color: black;
 }
@@ -75,16 +76,17 @@
   width: 70%;
   height: 200px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /*margin-left: auto;
+  margin-right: auto;*/
   margin-bottom: 10px;
 }
 
 .itemimg img{
   border-radius: 10px;
-  display: block;
+  justify-content: flex-start;
+  /*display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;*/
   height: 100%;
 }
 

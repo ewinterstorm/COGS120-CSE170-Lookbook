@@ -1,4 +1,3 @@
-//var newcart;
 
 $(document).ready(function() {
   initializePage();
@@ -17,52 +16,23 @@ function initializePage() {
   }
 
   /*-------------------CART TEMPLATE-------------------*/
-
-    //Check if items have been added to local storage
-
-    /*var yes1;
-    var yes2;
-    var yes3;
-    console.log(JSON.parse(localStorage.getItem('yes1')))
-    if (localStorage.getItem('yes1') != null){
-      yes1 = JSON.parse(localStorage.getItem('yes1'));
-      console.log(yes1);
-    };
-    if (localStorage.getItem('yes2') != null) {
-      yes2 = JSON.parse(localStorage.getItem('yes2'));
-    };
-    if (localStorage.getItem('yes3') != null) {
-      yes3 = JSON.parse(localStorage.getItem('yes3'));
-    };
-
-    console.log(yes1);
-    console.log(yes2);
-    console.log(yes3);
-
-    if (newcart == null) {
-      newcart = [];
-    };
-
-    //If item has been added to local storage, get item data and push to cart array
-    if (yes1 == 1){
-      var item1 = JSON.parse(localStorage.getItem('item1'));
-      newcart.push(item1);
-    }
-
-    if (yes2 == 1){
-      var item2 = JSON.parse(localStorage.getItem('item2'));
-      newcart.push(item2);
-    }
-
-    if (yes3 == 1){
-      var item3 = JSON.parse(localStorage.getItem('item3'));
-      newcart.push(item3);
-    }*/
-
     var newcart = JSON.parse(localStorage.getItem('cart'));
-    console.log(newcart);
+
     if (newcart == null) {
       newcart = [];
+    }
+    console.log(newcart);
+    for (var i = 0; i < newcart.length; i++){
+      var num = newcart[i].index;
+      var size = localStorage.getItem("item"+num+"size");
+      var qty = localStorage.getItem("item"+num+"qty");
+      newcart[i].itemsize = size;
+      newcart[i].itemqty = qty;
+    }
+
+    if (newcart.length == 0){
+      $("#templatedCart").text('Your cart is empty!');
+      $("#checkoutbtn").hide();
     }
 
     var length = newcart.length;
@@ -80,13 +50,148 @@ function initializePage() {
       parentDiv.append(curHtml);
     };
 
+    /*-------------------DELETE ITEMS FROM CART-------------------*/
+    $('#deleteitem1').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 1;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item1").hide();
+    });
 
-    $(".deleteitems").click(del);
-    function del(event){
-      var cart = [];
-      localStorage.setItem('cart', JSON.stringify(cart));
-      $(".cartitem").hide();
-    }
+    $('#deleteitem2').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 2;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item2").hide();
+    });
 
+    $('#deleteitem3').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 3;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item3").hide();
+    });
 
+    $('#deleteitem4').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 4;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item4").hide();
+    });
+
+    $('#deleteitem5').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 5;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item5").hide();
+    });
+
+    $('#deleteitem6').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 6;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item6").hide();
+    });
+
+    $('#deleteitem7').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 7;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item7").hide();
+    });
+
+    $('#deleteitem8').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 8;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item8").hide();
+    });
+
+    $('#deleteitem9').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 9;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item9").hide();
+    });
+
+    $('#deleteitem10').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 10;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item10").hide();
+    });
+
+    $('#deleteitem11').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 11;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item11").hide();
+    });
+
+    $('#deleteitem12').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 12;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item12").hide();
+    });
+
+    $('#deleteitem13').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 13;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item13").hide();
+    });
+
+    $('#deleteitem14').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 14;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item14").hide();
+    });
+
+    $('#deleteitem15').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 15;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item15").hide();
+    });
+
+    $('#deleteitem16').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 16;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item16").hide();
+    });
+
+    $('#deleteitem17').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 17;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item17").hide();
+    });
+
+    $('#deleteitem18').click(function(e){
+      var delcart = $.grep(newcart, function(e){
+        return e.index != 18;
+      })
+      localStorage.setItem('cart', JSON.stringify(delcart));
+      $("#item18").hide();
+    });
 }

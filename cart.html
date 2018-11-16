@@ -56,11 +56,11 @@
   <div class="container" id="cartcontainer">
     <div class="container carttitle">
         Cart
+        <button class="btn" id="checkoutbtn">
+          Checkout
+        </button>
     </div>
 
-    <button class="deleteitems">
-      Delete All Items
-    </button>
     <!--Template for cart items-->
     <script id="cart-template" type="text/x-handlebars-template">
       <div class="cartitem" id="item{{index}}">
@@ -83,14 +83,19 @@
           <div class=iteminfo>
             Shipping time: {{shiptime}} days
           </div>
-
         </div>
+
+        <button class="btn deletebtn" id="deleteitem{{index}}">
+          Delete item
+        </button>
       </div>
+
     </script>
 
     <div class="container" id="templatedCart">
       <!--injected html code for cart items-->
     </div>
+
   </div>
 
   <script src="handlebars-v4.0.12.js"></script>

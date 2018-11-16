@@ -1,0 +1,68 @@
+//Check if items have been added to local storage
+
+/*var yes1;
+var yes2;
+var yes3;
+console.log(JSON.parse(localStorage.getItem('yes1')))
+if (localStorage.getItem('yes1') != null){
+  yes1 = JSON.parse(localStorage.getItem('yes1'));
+  console.log(yes1);
+};
+if (localStorage.getItem('yes2') != null) {
+  yes2 = JSON.parse(localStorage.getItem('yes2'));
+};
+if (localStorage.getItem('yes3') != null) {
+  yes3 = JSON.parse(localStorage.getItem('yes3'));
+};
+
+console.log(yes1);
+console.log(yes2);
+console.log(yes3);
+
+if (newcart == null) {
+  newcart = [];
+};
+
+//If item has been added to local storage, get item data and push to cart array
+if (yes1 == 1){
+  var item1 = JSON.parse(localStorage.getItem('item1'));
+  newcart.push(item1);
+}
+
+if (yes2 == 1){
+  var item2 = JSON.parse(localStorage.getItem('item2'));
+  newcart.push(item2);
+}
+
+if (yes3 == 1){
+  var item3 = JSON.parse(localStorage.getItem('item3'));
+  newcart.push(item3);
+}*/
+
+
+
+
+//var yes1 = localStorage.getItem('yes1');
+//console.log(yes1);
+
+//ITEM1 add to cart
+/*$("#item1 .addcart").click(function () {
+      localStorage.setItem('item1',JSON.stringify({'itemsize': item1size, 'itemqty': item1qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_f?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'itemcost': '$40','shiptime': '2','index': 1}));
+      console.log(localStorage.getItem('yes1'));
+});
+
+localStorage.setItem('yes1', JSON.stringify(1));
+
+//ITEM2 add to cart
+$("#item2 .addcart").click(addCart2);
+function addCart2(event) {
+  localStorage.setItem('item2',JSON.stringify({'itemsize': item2size, 'itemqty': item2qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/47834106_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain','itemcost': '$20','shiptime': '1','index': 2}));
+  localStorage.setItem('yes2', 1);
+};
+
+//ITEM3 add to cart
+$("#item3 .addcart").click(addCart3);
+function addCart3(event) {
+  localStorage.setItem('item3',JSON.stringify({'itemsize': item3size, 'itemqty': item3qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/34643320_007_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain','itemcost': '$10','shiptime': '2','index': 3}));
+  localStorage.setItem('yes3', 1);
+}*/

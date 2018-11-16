@@ -10,6 +10,7 @@ $(document).ready(function() {
 
 function initializePage() {
 
+  /*-------------------LOGIN STATUS-------------------*/
   var loginstatus = localStorage.getItem('loggedin');
   if (loginstatus == 1){
     $('#loggedin').html("<div class='navbtn hvr-grow' id='navlogin'>Profile</div>");
@@ -32,7 +33,6 @@ function initializePage() {
     var curHtml2= template2(curData2);
     parentDiv2.append(curHtml2);
   };
-
 
   /*-------------------ADD TO CART-------------------*/
 
@@ -75,72 +75,54 @@ function initializePage() {
   });
 
   var item3qty = localStorage.getItem('item3qty');
-  $('select[name=item3qty]').val(item1qty);
+  $('select[name=item3qty]').val(item3qty);
 
   $('select[name=item3qty]').change(function() {
      localStorage.setItem('item3qty', $(this).val());
   });
 
-
-  //var yes1 = localStorage.getItem('yes1');
-  //console.log(yes1);
-
-  //ITEM1 add to cart
-  /*$("#item1 .addcart").click(function () {
-        localStorage.setItem('item1',JSON.stringify({'itemsize': item1size, 'itemqty': item1qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_f?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'itemcost': '$40','shiptime': '2','index': 1}));
-        console.log(localStorage.getItem('yes1'));
-  });
-
-  localStorage.setItem('yes1', JSON.stringify(1));
-
-  //ITEM2 add to cart
-  $("#item2 .addcart").click(addCart2);
-  function addCart2(event) {
-    localStorage.setItem('item2',JSON.stringify({'itemsize': item2size, 'itemqty': item2qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/47834106_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain','itemcost': '$20','shiptime': '1','index': 2}));
-    localStorage.setItem('yes2', 1);
-  };
-
-  //ITEM3 add to cart
-  $("#item3 .addcart").click(addCart3);
-  function addCart3(event) {
-    localStorage.setItem('item3',JSON.stringify({'itemsize': item3size, 'itemqty': item3qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/34643320_007_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain','itemcost': '$10','shiptime': '2','index': 3}));
-    localStorage.setItem('yes3', 1);
-  }*/
-
   var cart = JSON.parse(localStorage.getItem(cart));
+
+
 
   $("#item1 .addcart").click(function () {
     cart = JSON.parse(localStorage.getItem('cart'));
     if (cart == null) {
       cart = [];
     }
-    var item = {'itemsize': item1size, 'itemqty': item1qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_f?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'itemcost': '$40','shiptime': '2','index': 1};
-    cart.push(item);
-    console.log(cart);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    var find = cart.findIndex(cart => cart.index === 1);
+    if (find == -1){
+      var item = {'itemsize': item1size, 'itemqty': item1qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_f?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'itemcost': '$40','shiptime': '2','index': 1};
+      cart.push(item);
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
   });
 
   $("#item2 .addcart").click(function () {
+    cart = JSON.parse(localStorage.getItem('cart'));
     if (cart == null) {
       cart = [];
     }
-    cart = JSON.parse(localStorage.getItem('cart'));
+    var find = cart.findIndex(cart => cart.index === 2);
+    if (find == -1){
     var item = {'itemsize': item2size, 'itemqty': item2qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/47834106_020_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain','itemcost': '$20','shiptime': '1','index': 2};
     cart.push(item);
     localStorage.setItem('cart', JSON.stringify(cart));
+  }
   });
 
   $("#item3 .addcart").click(function () {
+    cart = JSON.parse(localStorage.getItem('cart'));
     if (cart == null) {
       cart = [];
     }
-    cart = JSON.parse(localStorage.getItem('cart'));
+    var find = cart.findIndex(cart => cart.index === 3);
+    if (find == -1){
     var item = {'itemsize': item3size, 'itemqty': item3qty, 'itemimg': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/34643320_007_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain','itemcost': '$10','shiptime': '2','index': 3};
     cart.push(item);
     localStorage.setItem('cart', JSON.stringify(cart));
+    }
   });
-
-  //console.log(JSON.parse(localStorage.getItem('yes1')));
 
   /*-------------------POPUP FOR ADD TO CART-------------------*/
     $("#myPopup1").hide();
