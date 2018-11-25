@@ -16,8 +16,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <a href="index.html" style="text-decoration:none" id="title">
-          <div class="navbtn hvr-grow">
-            <div class="brand">
+          <div class="navbtn">
+            <div class="brand hvr-grow">
               Lookbook
             </div>
           </div>
@@ -52,28 +52,42 @@
       </div>
 
       <button class="delfilters">
-        Remove Filter
+        Remove All Filters
       </button>
 
       <div class="filters">
-        <div style="font-size: 17px">
-          Current Filter: <div id="currfilter" style="font-size:15px">None</div>
-        </div>
-        <div>Season</div>
-          <div class="hvr-grow filtertxt changeSpring" id="Spring" style="font-size: 18px">
+        <div class="filtertype">Season</div>
+          <div class="hvr-grow filtertxt" id="Spring">
             Spring
           </div>
-          <div class="hvr-grow filtertxt" id="Summer" style="font-size: 18px">
+          <div class="hvr-grow filtertxt" id="Summer">
             Summer
           </div>
-          <div class="hvr-grow filtertxt" id="Fall" style="font-size: 18px">
+          <div class="hvr-grow filtertxt" id="Fall">
             Fall
           </div>
-          <div class="hvr-grow filtertxt" id="Winter" style="font-size: 18px">
+          <div class="hvr-grow filtertxt" id="Winter">
             Winter
           </div>
       </div>
+
+      <div class="filters">
+        <div class="filtertype">Style</div>
+          <div class="hvr-grow filtertxt" id="Pastel">
+            Pastel
+          </div>
+          <div class="hvr-grow filtertxt" id="Casual">
+            Casual
+          </div>
+          <div class="hvr-grow filtertxt" id="Chic">
+            Chic
+          </div>
+          <div class="hvr-grow filtertxt" id="Vintage">
+            Vintage
+          </div>
+      </div>
     </div>
+
 
     <!--Template for outfit photos-->
     <script id="outfit-template" type="text/x-handlebars-template">
@@ -84,8 +98,14 @@
         </div>
     </script>
 
-    <div class="grid" id="templatedOutfits">
-        <!-- injected html code for outfits-->
+    <div id="gridbox">
+      <div id="filter">
+        Current Filter: <span id="currfilter">None</span>
+      </div>
+
+      <div class="grid" id="templatedOutfits">
+          <!-- injected html code for outfits-->
+      </div>
     </div>
   </div>
 

@@ -1,6 +1,6 @@
 /*-------------TOP NAVBAR----------------*/
 body{
-  background-color: #ffe4f4;
+  background-color: #ffd9e6;
 }
 
 div {
@@ -63,10 +63,25 @@ body {
   justify-content: space-evenly;
 }
 
-.grid {
+#gridbox{
   margin-top: 50px;
-  margin-bottom: 100px;
   margin-left: 170px;
+}
+
+#filter{
+  margin-left: 30px;
+  font-size: 25px;
+}
+
+#currfilter{
+  font-size: 25px;
+  color: #ec6190;
+}
+
+.grid {
+  margin-top: 0px;
+  margin-bottom: 80px;
+  margin-left: 0px;
   display: grid;
   /* spacing between grid items */
   grid-gap: 100px;
@@ -112,6 +127,7 @@ body {
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.02);
+    color: #fb91b2;
 }
 
 
@@ -121,10 +137,26 @@ body {
   color: white;
   font-size: 25px;
   padding-left: 20px;
+  padding-bottom: 10px;
 }
 
 .delfilters {
-  margin-left: 20px;
+  margin-left: 10px;
+}
+
+.filtertype{
+  text-decoration: underline;
+  color: white;
+  font-size: 22px;
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.filtertxt{
+  font-size: 20px;
+  padding-left: 40px;
+  color: white;
 }
 
 /* The side navigation menu */
@@ -143,10 +175,6 @@ body {
 
 /* The navigation menu links */
 .filters div {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
     display: block;
     transition: 0.3s;
 }
@@ -178,41 +206,4 @@ body {
     bottom: 125%;
     left: 50%;
     margin-left: -40px;
-}
-
-
-/* Popup arrow *//*
-.popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) *//*
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 2ms;
-    animation: fadeIn 2ms
-}*/
-
-/*.popup .close {
-  visibility: hidden;
-  -webkit-animation: fadeOut 2ms;
-  animation: fadeOut 2ms;
-}*/
-
-/*Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
 }
