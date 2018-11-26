@@ -1,5 +1,5 @@
-var user1 = {'name': 'Elise', 'email': 'eyw009@ucsd.edu', 'street': '1234 ucsd street', 'unit': 'Unit 100', 'townzip':'La Jolla, CA 12345', 'profileimg':'https://marketplace.canva.com/MAB4Yqx-uWs/1/thumbnail/canva-young-executive-woman-profile-icon--MAB4Yqx-uWs.png'};
-var user2 = {'name': 'hold', 'email': 'blah@blah.com', 'street': '1111 asdf street', 'unit':'', 'townzip': 'LA, CA 11111', 'profileimg': 'https://i.pinimg.com/originals/fb/ad/99/fbad991624eee2ff5bb9f0563959d1b9.png'};
+var user1 = {'name': 'First Last', 'email': 'eyw009@ucsd.edu', 'street': '1234 ucsd street', 'unit': 'Unit 100', 'townzip':'La Jolla, CA 12345', 'profileimg':'https://marketplace.canva.com/MAB4Yqx-uWs/1/thumbnail/canva-young-executive-woman-profile-icon--MAB4Yqx-uWs.png'};
+var user2 = {'name': 'Myname Is', 'email': 'blah@blah.com', 'street': '1111 asdf street', 'unit':'', 'townzip': 'LA, CA 11111', 'profileimg': 'https://i.pinimg.com/originals/fb/ad/99/fbad991624eee2ff5bb9f0563959d1b9.png'};
 localStorage.setItem('user1', JSON.stringify(user1));
 localStorage.setItem('user2', JSON.stringify(user2));
 
