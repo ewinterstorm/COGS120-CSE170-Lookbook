@@ -48,12 +48,10 @@
     <div id="mySidenav" class="sidenav">
       <!--<a href="javascript:void(0)" class="closebtn closenav">&times;</a>-->
       <div class="filtertitle">
-        Filters
+        Filter By:
       </div>
 
-      <button class="delfilters">
-        Remove All Filters
-      </button>
+
 
       <div class="filters">
         <div class="filtertype">Season</div>
@@ -86,6 +84,22 @@
             Vintage
           </div>
       </div>
+
+      <div class="filters">
+        <div class="filtertype">Item Type</div>
+          <div class="hvr-grow filtertxt" id="Dresses">
+            Dresses
+          </div>
+          <div class="hvr-grow filtertxt" id="Sweaters">
+            Sweaters
+          </div>
+          <div class="hvr-grow filtertxt" id="Skirts">
+            Skirts
+          </div>
+          <div class="hvr-grow filtertxt" id="Pants">
+            Pants
+          </div>
+      </div>
     </div>
 
 
@@ -100,7 +114,10 @@
 
     <div id="gridbox">
       <div id="filter">
-        Current Filter: <span id="currfilter">None</span>
+        Current Filter: <span id="currfilter">None</span> <br>
+        <button class="delfilters btn">
+          Remove All Filters
+        </button>
       </div>
 
       <div class="grid" id="templatedOutfits">

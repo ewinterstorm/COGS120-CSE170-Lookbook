@@ -71,6 +71,7 @@ body {
 #filter{
   margin-left: 30px;
   font-size: 25px;
+  color: black;
 }
 
 #currfilter{
@@ -80,7 +81,7 @@ body {
 
 .grid {
   margin-top: 0px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   margin-left: 0px;
   display: grid;
   /* spacing between grid items */
@@ -89,6 +90,8 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
   grid-auto-rows: 500px;
   padding: 50px;
+  padding-top: 20px;
+  grid-row-gap: 80px;
 }
 
 /*-------------OUTFIT TITLES----------------*/
@@ -137,11 +140,15 @@ body {
   color: white;
   font-size: 25px;
   padding-left: 20px;
-  padding-bottom: 10px;
 }
 
 .delfilters {
-  margin-left: 10px;
+  margin: 5px;
+  color: black;
+}
+
+.delfilters:hover{
+  background-color: #fb91b2;
 }
 
 .filtertype{

@@ -1,10 +1,10 @@
 var outfitData = [
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 1, 'Season': 'Spring', 'Style': 'Casual'},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/47310701_026_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 2, 'Season': 'Summer', 'Style': 'Casual'},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/43306216_024_b?$redesign-zoom-5x$&amp;hei=2175&amp;qlt=80&amp;fit=constrain', 'index': 3, 'Season': 'Winter', 'Style': 'Casual'},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48249775_053_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 4, 'Season': 'Summer', 'Style': 'Pastel'},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/43113000_015_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 5, 'Season': 'Fall', 'Style': 'Chic'},
-  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/47941026_031_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 6, 'Season': 'Fall', 'Style': 'Vintage'}
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/45466208_018_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 1, 'Season': 'Spring', 'Style': 'Casual', 'Dress': 1, 'Sweater': 0, 'Skirt': 0, 'Pant':0},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/47310701_026_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 2, 'Season': 'Summer', 'Style': 'Casual', 'Dress': 0, 'Sweater': 1, 'Skirt': 0, 'Pant':1},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/43306216_024_b?$redesign-zoom-5x$&amp;hei=2175&amp;qlt=80&amp;fit=constrain', 'index': 3, 'Season': 'Winter', 'Style': 'Casual', 'Dress': 0, 'Sweater': 1, 'Skirt': 0, 'Pant':1},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/48249775_053_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 4, 'Season': 'Summer', 'Style': 'Pastel', 'Dress': 0, 'Sweater': 0, 'Skirt': 1, 'Pant':0},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/43113000_015_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 5, 'Season': 'Fall', 'Style': 'Chic', 'Dress': 0, 'Sweater': 1, 'Skirt': 1, 'Pant':0},
+  {'outfitpic': 'https://images.urbanoutfitters.com/is/image/UrbanOutfitters/47941026_031_b?$xlarge$&amp;hei=900&amp;qlt=80&amp;fit=constrain', 'index': 6, 'Season': 'Fall', 'Style': 'Vintage', 'Dress': 0, 'Sweater': 0, 'Skirt': 0, 'Pant':1}
 ]
 
 /* Set acceptable usernames and passwords for login*/
@@ -75,6 +75,10 @@ function initializePage() {
     $("#Casual").html("<span class='hvr-grow'>Casual</span>");
     $("#Chic").html("<span class='hvr-grow'>Chic</span>");
     $("#Vintage").html("<span class='hvr-grow'>Vintage</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
 
     for (var i = 0; i < outfitData.length; i++) {
       var curData = outfitData[i];
@@ -98,6 +102,10 @@ function initializePage() {
     $("#Casual").html("<span class='hvr-grow'>Casual</span>");
     $("#Chic").html("<span class='hvr-grow'>Chic</span>");
     $("#Vintage").html("<span class='hvr-grow'>Vintage</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
 
     for (var i = 0; i < outfitData.length; i++) {
       var curData = outfitData[i];
@@ -121,6 +129,10 @@ function initializePage() {
     $("#Casual").html("<span class='hvr-grow'>Casual</span>");
     $("#Chic").html("<span class='hvr-grow'>Chic</span>");
     $("#Vintage").html("<span class='hvr-grow'>Vintage</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
 
     for (var i = 0; i < outfitData.length; i++) {
       var curData = outfitData[i];
@@ -144,6 +156,10 @@ function initializePage() {
     $("#Casual").html("<span class='hvr-grow'>Casual</span>");
     $("#Chic").html("<span class='hvr-grow'>Chic</span>");
     $("#Vintage").html("<span class='hvr-grow'>Vintage</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
 
     for (var i = 0; i < outfitData.length; i++) {
       var curData = outfitData[i];
@@ -168,6 +184,10 @@ function initializePage() {
     $("#Fall").html("<span class='hvr-grow'>Fall</span>");
     $("#Summer").html("<span class='hvr-grow'>Summer</span>");
     $("#Winter").html("<span class='hvr-grow'>Winter</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
 
     for (var i = 0; i < outfitData.length; i++) {
       var curData = outfitData[i];
@@ -191,6 +211,10 @@ function initializePage() {
     $("#Fall").html("<span class='hvr-grow'>Fall</span>");
     $("#Summer").html("<span class='hvr-grow'>Summer</span>");
     $("#Winter").html("<span class='hvr-grow'>Winter</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
 
     for (var i = 0; i < outfitData.length; i++) {
       var curData = outfitData[i];
@@ -214,6 +238,10 @@ function initializePage() {
     $("#Fall").html("<span class='hvr-grow'>Fall</span>");
     $("#Summer").html("<span class='hvr-grow'>Summer</span>");
     $("#Winter").html("<span class='hvr-grow'>Winter</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
 
     for (var i = 0; i < outfitData.length; i++) {
       var curData = outfitData[i];
@@ -237,6 +265,10 @@ function initializePage() {
     $("#Fall").html("<span class='hvr-grow'>Fall</span>");
     $("#Summer").html("<span class='hvr-grow'>Summer</span>");
     $("#Winter").html("<span class='hvr-grow'>Winter</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
 
     for (var i = 0; i < outfitData.length; i++) {
       var curData = outfitData[i];
@@ -250,6 +282,117 @@ function initializePage() {
     }
   });
 
+
+  /*-------------------ITEM TYPE FILTERS-------------------*/
+  $("#Dresses").click(function(e){
+    $('#currfilter').text('Dresses');
+    $("#Dresses").html("<span class='hvr-grow' style='color:#fb91b2'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
+    $("#Vintage").html("<span class='hvr-grow'>Vintage</span>");
+    $("#Casual").html("<span class='hvr-grow'>Casual</span>");
+    $("#Chic").html("<span class='hvr-grow'>Chic</span>");
+    $("#Pastel").html("<span class='hvr-grow'>Pastel</span>");
+    $("#Spring").html("<span class='hvr-grow'>Spring</span>");
+    $("#Fall").html("<span class='hvr-grow'>Fall</span>");
+    $("#Summer").html("<span class='hvr-grow'>Summer</span>");
+    $("#Winter").html("<span class='hvr-grow'>Winter</span>");
+
+    for (var i = 0; i < outfitData.length; i++) {
+      var curData = outfitData[i];
+      var outfitnum = "#outfit" + (i+1);
+      if (curData.Dress != 1) {
+        $(outfitnum).hide();
+      }
+      else{
+        $(outfitnum).show();
+      }
+    }
+  });
+
+  $("#Sweaters").click(function(e){
+    $('#currfilter').text('Sweaters');
+    $("#Sweaters").html("<span class='hvr-grow' style='color:#fb91b2'>Sweaters</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
+    $("#Vintage").html("<span class='hvr-grow'>Vintage</span>");
+    $("#Casual").html("<span class='hvr-grow'>Casual</span>");
+    $("#Chic").html("<span class='hvr-grow'>Chic</span>");
+    $("#Pastel").html("<span class='hvr-grow'>Pastel</span>");
+    $("#Spring").html("<span class='hvr-grow'>Spring</span>");
+    $("#Fall").html("<span class='hvr-grow'>Fall</span>");
+    $("#Summer").html("<span class='hvr-grow'>Summer</span>");
+    $("#Winter").html("<span class='hvr-grow'>Winter</span>");
+
+    for (var i = 0; i < outfitData.length; i++) {
+      var curData = outfitData[i];
+      var outfitnum = "#outfit" + (i+1);
+      if (curData.Sweater != 1) {
+        $(outfitnum).hide();
+      }
+      else{
+        $(outfitnum).show();
+      }
+    }
+  });
+
+  $("#Skirts").click(function(e){
+    $('#currfilter').text('Skirts');
+    $("#Skirts").html("<span class='hvr-grow' style='color:#fb91b2'>Skirts</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
+    $("#Vintage").html("<span class='hvr-grow'>Vintage</span>");
+    $("#Casual").html("<span class='hvr-grow'>Casual</span>");
+    $("#Chic").html("<span class='hvr-grow'>Chic</span>");
+    $("#Pastel").html("<span class='hvr-grow'>Pastel</span>");
+    $("#Spring").html("<span class='hvr-grow'>Spring</span>");
+    $("#Fall").html("<span class='hvr-grow'>Fall</span>");
+    $("#Summer").html("<span class='hvr-grow'>Summer</span>");
+    $("#Winter").html("<span class='hvr-grow'>Winter</span>");
+
+    for (var i = 0; i < outfitData.length; i++) {
+      var curData = outfitData[i];
+      var outfitnum = "#outfit" + (i+1);
+      if (curData.Skirt != 1) {
+        $(outfitnum).hide();
+      }
+      else{
+        $(outfitnum).show();
+      }
+    }
+  });
+
+  $("#Pants").click(function(e){
+    $('#currfilter').text('Pants');
+    $("#Pants").html("<span class='hvr-grow' style='color:#fb91b2'>Pants</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Vintage").html("<span class='hvr-grow'>Vintage</span>");
+    $("#Casual").html("<span class='hvr-grow'>Casual</span>");
+    $("#Chic").html("<span class='hvr-grow'>Chic</span>");
+    $("#Pastel").html("<span class='hvr-grow'>Pastel</span>");
+    $("#Spring").html("<span class='hvr-grow'>Spring</span>");
+    $("#Fall").html("<span class='hvr-grow'>Fall</span>");
+    $("#Summer").html("<span class='hvr-grow'>Summer</span>");
+    $("#Winter").html("<span class='hvr-grow'>Winter</span>");
+
+    for (var i = 0; i < outfitData.length; i++) {
+      var curData = outfitData[i];
+      var outfitnum = "#outfit" + (i+1);
+      if (curData.Pant != 1) {
+        $(outfitnum).hide();
+      }
+      else{
+        $(outfitnum).show();
+      }
+    }
+  });
+
+
   /*-------------------DELETE FILTERS-------------------*/
   $(".delfilters").click(function(e){
     $('#currfilter').text('None');
@@ -261,6 +404,10 @@ function initializePage() {
     $("#Casual").html("<span class='hvr-grow'>Casual</span>");
     $("#Chic").html("<span class='hvr-grow'>Chic</span>");
     $("#Vintage").html("<span class='hvr-grow'>Vintage</span>");
+    $("#Dresses").html("<span class='hvr-grow'>Dresses</span>");
+    $("#Sweaters").html("<span class='hvr-grow'>Sweaters</span>");
+    $("#Skirts").html("<span class='hvr-grow'>Skirts</span>");
+    $("#Pants").html("<span class='hvr-grow'>Pants</span>");
 
     for (var i = 0; i < outfitData.length; i++) {
       var curData = outfitData[i];
