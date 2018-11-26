@@ -207,3 +207,20 @@ body {
     left: 50%;
     margin-left: -40px;
 }
+
+/*-------------CHECKOUT PAGE----------------*/
+.checkoutmessage{
+  margin-top: 70px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+}
+
+#moreshop{
+  color: #d66c8d;
+  text-decoration: none;
+}
+
+#moreshop:hover{
+  color: #ce3c72;
+}
